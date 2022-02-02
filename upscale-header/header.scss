@@ -8,7 +8,7 @@ $row-height: 54px;
 	width: 100%;
 	display: block;
 	box-shadow: 0 7px 100vh 0 #00000029;
-	background: rgb(72, 127, 245);
+	background: #015A85;
 	min-height: $row-height;
 	z-index: 4;
 
@@ -40,7 +40,7 @@ $row-height: 54px;
 			align-items: center;
 		}
 		&__hamburger {
-			@include button($background-color: rgb(72, 127, 245));
+			@include button($background-color: #015A85);
 			box-sizing: border-box;
 			display: flex;
 			align-items: center;

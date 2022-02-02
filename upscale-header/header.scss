@@ -1,0 +1,73 @@
+@import '~styles/helpers/_module';
+
+$row-height: 54px;
+
+:host {
+	position: sticky;
+	top: 0;
+	width: 100%;
+	display: block;
+	box-shadow: 0 7px 100vh 0 #00000029;
+	background: rgb(196, 44, 44);
+	min-height: $row-height;
+	z-index: 4;
+
+	.header {
+		&__top {
+			display: flex;
+			width: 100%;
+			justify-content: space-between;
+			box-sizing: border-box;
+			flex-grow: 0;
+			flex-shrink: 1;
+			&-navbar {
+				display: flex;
+				align-items: center;
+			}
+		}
+		&__bottom {
+			@include upscale-multiple(mobile, tablet) {
+				display: none;
+			}
+
+			&-navbar {
+				display: block;
+			}
+		}
+		&__top-left {
+			display: flex;
+			height: $row-height;
+			align-items: center;
+		}
+		&__hamburger {
+			@include button($background-color: black);
+			box-sizing: border-box;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			height: 42px;
+			padding: 0 12px;
+			margin-right: 6px;
+			@include upscale-desktop() {
+				display: none!important;
+			}
+		}
+		&__shopping-cart-icon {
+			@include clickable;
+		}
+		&__logo-image {
+			&-wrapper {
+				height: 100%;
+				display: flex;
+				align-items: center;
+				background-color: transparent;
+				border: none;
+			}
+			@include upscale-desktop {
+				max-height: 40px;
+			}
+			max-height: 26px;
+			@include clickable;
+		}
+	}
+}
